@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GUIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI debugTMP;
+    [SerializeField] private TextMeshProUGUI hintTMP;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +25,13 @@ public class GUIController : MonoBehaviour
 
     public void SetHint(string hint)
     {
-        //TODO write hint
+        hintTMP.text = hint;
     }
 
 
     public void clearHint()
     {
-        //TODO clear hint
+        hintTMP.text = "";
     }
 
 

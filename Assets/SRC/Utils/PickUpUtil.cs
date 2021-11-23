@@ -15,6 +15,8 @@ public class PickUpUtil : MonoBehaviour
 {
     [SerializeField] private EnumItemType enumItemType;
     private bool canPickUp = false;
+    private GUIController _Gui;
+    private HintModel hintModel;
     private string itemType;
     private PickUpModel pickUpModel;
     private PlayerController playerController;
@@ -26,9 +28,12 @@ public class PickUpUtil : MonoBehaviour
         tags = new TagModel();
         names = new NameModel();
         pickUpModel = new PickUpModel();
+        hintModel = new HintModel();
         GameObject playerObject = GameObject.Find(names.Player);
         playerController = playerObject.GetComponent<PlayerController>();
         SetItemType();
+        GameObject GUIObject = GameObject.Find(names.GUI);
+        _Gui = GUIObject.GetComponent<GUIController>();
     }
 
     // Update is called once per frame
@@ -77,6 +82,7 @@ public class PickUpUtil : MonoBehaviour
         string _tag = other.tag;
         if (_tag == tags.Player)
         {
+            _Gui.SetHint(hintModel.PressEToPickUP);
             canPickUp = true;
         }
     }
@@ -87,7 +93,7 @@ public class PickUpUtil : MonoBehaviour
         string _tag = other.tag;
         if (_tag == tags.Player)
         {
-            //TODO display on GUi to press e.
+            _Gui.clearHint();
             canPickUp = false;
         }
     }
