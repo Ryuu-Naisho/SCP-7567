@@ -15,4 +15,10 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+
+
+    public void PickUpItem(string item)
+    {
+        //TODO Finish logic.
+    }
 }
