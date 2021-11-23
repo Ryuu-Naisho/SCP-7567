@@ -1,10 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+internal enum EnumItemType
+{
+    ArmoryKey,
+    Flamethrower,
+    TranqDart,
+    TranquilizerGun,
+    Note,
+    TapeRecorder
+}
 
 public class PickUpUtil : MonoBehaviour
 {
+    [SerializeField] private EnumItemType enumItemType;
     private bool canPickUp = false;
+    private string itemType;
+    private PickUpModel pickUpModel;
     private PlayerController playerController;
     private TagModel tags;
     private NameModel names;
@@ -13,8 +25,10 @@ public class PickUpUtil : MonoBehaviour
     {
         tags = new TagModel();
         names = new NameModel();
+        pickUpModel = new PickUpModel();
         GameObject playerObject = GameObject.Find(names.Player);
         playerController = playerObject.GetComponent<PlayerController>();
+        SetItemType();
     }
 
     // Update is called once per frame
@@ -22,12 +36,40 @@ public class PickUpUtil : MonoBehaviour
     {
         if (canPickUp)
         {
-            if (Input.GetButtonDown("e"))
+            if (Input.GetKeyDown("e"))
             {
-                playerController.PickUpItem(name);
+                playerController.PickUpItem(itemType);
+                Destroy(gameObject);
             }
         }   
     }
+
+
+    private void SetItemType()
+    {
+        switch(this.enumItemType)
+        {
+            case EnumItemType.ArmoryKey:
+                itemType = pickUpModel.ArmoryKey;
+                break;
+            case EnumItemType.Flamethrower:
+                itemType = pickUpModel.Flamethrower;
+                break;
+            case EnumItemType.Note:
+                itemType = pickUpModel.Note;
+                break;
+            case EnumItemType.TapeRecorder:
+                itemType = pickUpModel.TapeRecorder;
+                break;
+            case EnumItemType.TranqDart:
+                itemType = pickUpModel.TranqDart;
+                break;
+            case EnumItemType.TranquilizerGun:
+                itemType = pickUpModel.TranquilizerGun;
+                break;
+                
+            }
+        }
 
 
     private void OnTriggerEnter(Collider other)
