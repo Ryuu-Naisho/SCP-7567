@@ -2,10 +2,13 @@
 
 ## Directory structure
 
--------------Assets
-----------------|
-------------Resources
-----|-------------------------|
---Audio-------------------Graphics
--|----|------------|---------|-------|-------|
-SFX Music      Animations Textures Models Prefabs
+- Assets
+  - Resources
+    - Audio
+      - SFX
+      - Muisc
+    - Graphics
+      - Animations
+      - Textures
+      - Models
+      - Prefabs
