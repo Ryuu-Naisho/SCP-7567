@@ -15,8 +15,11 @@ public class PickUpUtil : MonoBehaviour
 {
     [SerializeField] private EnumItemType enumItemType;
     private bool canPickUp = false;
+    private bool collected = false;
     private GUIController _Gui;
     private HintModel hintModel;
+    private bool isWeapon = false;
+    private ItemStruct itemStruct;
     private string itemType;
     private PickUpModel pickUpModel;
     private PlayerController playerController;
@@ -34,6 +37,10 @@ public class PickUpUtil : MonoBehaviour
         SetItemType();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
+
+
+        itemStruct = new ItemStruct(itemType, isWeapon);
+        itemStruct.GetTransform = transform;
     }
 
     // Update is called once per frame
@@ -43,9 +50,11 @@ public class PickUpUtil : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                playerController.PickUpItem(itemType);
+                playerController.PickUpItem(itemStruct);
                 _Gui.clearHint();
-                Destroy(gameObject);
+                if (!isWeapon)
+                    Destroy(gameObject);
+                collected = true;
             }
         }   
     }
@@ -59,6 +68,7 @@ public class PickUpUtil : MonoBehaviour
                 itemType = pickUpModel.ArmoryKey;
                 break;
             case EnumItemType.Flamethrower:
+                isWeapon = true;
                 itemType = pickUpModel.Flamethrower;
                 break;
             case EnumItemType.Note:
@@ -71,6 +81,7 @@ public class PickUpUtil : MonoBehaviour
                 itemType = pickUpModel.TranqDart;
                 break;
             case EnumItemType.TranquilizerGun:
+                isWeapon = true;
                 itemType = pickUpModel.TranquilizerGun;
                 break;
                 
@@ -83,8 +94,18 @@ public class PickUpUtil : MonoBehaviour
         string _tag = other.tag;
         if (_tag == tags.Player)
         {
-            _Gui.SetHint(hintModel.PressEToPickUP);
-            canPickUp = true;
+            if (!collected)
+            {
+                _Gui.SetHint(hintModel.PressEToPickUP);
+                canPickUp = true;
+                if (isWeapon)
+                {
+                    if (playerController.HasItem(itemStruct))
+                    {
+                        canPickUp = false;
+                    }
+                }
+            }
         }
     }
 

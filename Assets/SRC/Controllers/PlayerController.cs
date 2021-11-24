@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new InventoryUtil();
+        inventory = GetComponent<InventoryUtil>();
         names = new NameModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
@@ -26,18 +26,28 @@ public class PlayerController : MonoBehaviour
         {
             _Gui.clearDebug();
         }
+        else if (Input.GetKeyDown("p"))
+        {
+            inventory.Print();
+        }
     }
 
 
-    public void PickUpItem(string item)
+    public bool HasItem(ItemStruct item)
+    {
+        return inventory.isCollected(item);
+    }
+
+
+    public void PickUpItem(ItemStruct item)
     {
         inventory.Add(item);
-        string msg = item + " has been collected.";
+        string msg = item.ToString() + " has been collected.";
         _Gui.writeDebug(msg);
     }
 
 
-    private void DisposeItem(string item)
+    private void DisposeItem(ItemStruct item)
     {
         inventory.RemoveOne(item);
     }
