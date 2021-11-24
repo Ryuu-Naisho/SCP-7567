@@ -55,6 +55,7 @@ public class PickUpUtil : MonoBehaviour
                 if (!isWeapon)
                     Destroy(gameObject);
                 collected = true;
+                canPickUp = false;
             }
         }   
     }

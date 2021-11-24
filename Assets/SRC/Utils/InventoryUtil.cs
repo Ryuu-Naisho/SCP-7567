@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(WeaponsManagerController))]
 public class InventoryUtil:  MonoBehaviour
 {
-    private Dictionary<ItemStruct, int> inventory = new Dictionary < ItemStruct, int > ();
+    private Dictionary<ItemStruct, string> inventory = new Dictionary < ItemStruct, string > ();
     private PickUpModel pickUpModel;
     private WeaponsManagerController weaponsManagerController;
 
@@ -27,15 +28,7 @@ public class InventoryUtil:  MonoBehaviour
 
     public void Add(ItemStruct item)
     {
-        int value = 0;
-        if (isCollected(item))
-        {
-            value = inventory[item];
-        }
-        value ++;
-        inventory[item] = value;
-
-
+        inventory[item] = item.Name;
         if (item.IsWeapon)
         {
             AddToWeaponManager(item);
@@ -52,37 +45,41 @@ public class InventoryUtil:  MonoBehaviour
 
     public void RemoveAll(ItemStruct item)
     {
-        inventory.Remove(item);
+        foreach (KeyValuePair<ItemStruct, string> _item in inventory)
+        {
+            if (_item.Key.Name == item.Name)
+                inventory.Remove(_item.Key);
+        }
     }
 
 
     public void RemoveOne(ItemStruct item)
     {
-        int value = 0;
-        if (isCollected(item))
-        {
-            value = inventory[item];
-            value --;
-            inventory[item] = value;
-        }
-
-        if (value <= 0)
-            RemoveAll(item);
+        var _item = inventory.First(pair => pair.Value == item.Name);
+        inventory.Remove(_item.Key);
     }
 
 
     public bool isCollected(ItemStruct item)
     {
-        bool exists = inventory.ContainsKey(item);
+        bool exists = false;
+        foreach (KeyValuePair<ItemStruct, string> _item in inventory)
+        {
+            if (_item.Key.Name == item.Name)
+            {
+                exists = true;
+                break;
+            }
+        }
         return exists;
     }
 
 
     public void Print()
     {
-        foreach(KeyValuePair<ItemStruct, int> item in inventory)
+        foreach(KeyValuePair<ItemStruct, string> item in inventory)
         {
-            Debug.Log(item.Key.Name + " Count: " + item.Value);
+            Debug.Log(item.Value);
         }
     }
 }
