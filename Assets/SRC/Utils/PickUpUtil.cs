@@ -44,6 +44,7 @@ public class PickUpUtil : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 playerController.PickUpItem(itemType);
+                _Gui.clearHint();
                 Destroy(gameObject);
             }
         }   

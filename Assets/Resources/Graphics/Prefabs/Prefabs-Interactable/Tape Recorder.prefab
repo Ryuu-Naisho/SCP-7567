@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6430435730782090708}
   - component: {fileID: 5691681984801958226}
   - component: {fileID: 919132148603001501}
+  - component: {fileID: 2507503611350025646}
+  - component: {fileID: 8271144506127528339}
   m_Layer: 0
   m_Name: Tape Recorder
   m_TagString: Untagged
@@ -92,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 4773115534379144193}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.019999998, y: 0.020000005, z: 0.005536335}
   m_Center: {x: 1.163202e-16, y: 7.867603e-17, z: -0.0027681675}
@@ -192,3 +194,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2507503611350025646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773115534379144193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a08f8cdb49e2c3ab74e16cd49a0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enumItemType: 0
+--- !u!65 &8271144506127528339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773115534379144193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 1.3453037e-10, y: 6.4229656e-11, z: -0.0027681675}
