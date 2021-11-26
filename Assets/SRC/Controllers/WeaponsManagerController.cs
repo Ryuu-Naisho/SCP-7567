@@ -6,12 +6,13 @@ public class WeaponsManagerController : MonoBehaviour
 {
     private GameObject primary;
     private GameObject secondary;
-
+    private PickUpModel pickUpModel;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        pickUpModel = new PickUpModel();
     }
 
     // Update is called once per frame
@@ -38,6 +39,13 @@ public class WeaponsManagerController : MonoBehaviour
 
         Rigidbody rigidbody = primary.GetComponent<Rigidbody>();
          Destroy (rigidbody);
+
+
+         if (weapon.Name == pickUpModel.TranquilizerGun)
+         {
+             GunController gunController = weapon.GetTransform.GetComponent<GunController>();
+             gunController.enabled = true;
+         }
     }
 
 

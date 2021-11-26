@@ -42,21 +42,25 @@ public class InventoryUtil:  MonoBehaviour
     }
 
 
-
-    public void RemoveAll(ItemStruct item)
+    public ItemStruct GetByValue(string item)
     {
-        foreach (KeyValuePair<ItemStruct, string> _item in inventory)
-        {
-            if (_item.Key.Name == item.Name)
-                inventory.Remove(_item.Key);
-        }
+        var _item = inventory.First(pair => pair.Value == item);
+        return _item.Key;
     }
 
 
-    public void RemoveOne(ItemStruct item)
+    public int GetCountByValue(string value)
     {
-        var _item = inventory.First(pair => pair.Value == item.Name);
-        inventory.Remove(_item.Key);
+        int count = 0;
+        foreach (KeyValuePair<ItemStruct, string> _item in inventory)
+        {
+            if (_item.Key.Name == value)
+            {
+                count ++;
+            }
+        }
+
+        return count;
     }
 
 
@@ -73,6 +77,36 @@ public class InventoryUtil:  MonoBehaviour
         }
         return exists;
     }
+
+
+
+    public void RemoveAll(ItemStruct item)
+    {
+        foreach (KeyValuePair<ItemStruct, string> _item in inventory)
+        {
+            if (_item.Key.Name == item.Name)
+                inventory.Remove(_item.Key);
+        }
+    }
+
+
+    public void RemoveOne(ItemStruct item)
+    {
+        ItemStruct _item = GetByValue(item.Name);
+        inventory.Remove(_item);
+    }
+
+
+    public void RemoveByCount(ItemStruct item, int maxCount)
+    {
+        int count = 0;
+
+        for (int i = 0; i < maxCount; i++)
+        {
+            RemoveOne(item);
+        }
+    }
+
 
 
     public void Print()

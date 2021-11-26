@@ -33,6 +33,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    public ItemStruct GetFromInventory(string _item)
+    {
+        ItemStruct item = inventory.GetByValue(_item);
+        return item;
+    }
+
+
     public bool HasItem(ItemStruct item)
     {
         return inventory.isCollected(item);

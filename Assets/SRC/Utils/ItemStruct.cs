@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public struct ItemStruct
 {
-    public ItemStruct(string name, bool isWeapon)
+    public ItemStruct(string name, bool isWeapon=false)
     {
         Name = name;
         IsWeapon = isWeapon;
