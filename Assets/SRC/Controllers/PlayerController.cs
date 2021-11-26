@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
         {
             inventory.Print();
         }
+        else if (Input.GetKeyDown("z"))
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/ConcreteStep");
+        }
     }
 
 
