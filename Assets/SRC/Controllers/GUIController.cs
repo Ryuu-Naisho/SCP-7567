@@ -9,6 +9,7 @@ public class GUIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI debugTMP;
     [SerializeField] private TextMeshProUGUI hintTMP;
+    private bool showDebug = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,15 @@ public class GUIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (showDebug)
+        {
+            showDebug = false;
+            Action _clear = ()=>{
+                clearDebug();
+                showDebug = true;
+            };
+            StartCoroutine(Wait(3f, _clear));
+        }
     }
 
 
@@ -59,5 +68,12 @@ public class GUIController : MonoBehaviour
     public void clearDebug()
     {
         debugTMP.text = "";
+    }
+
+
+    private IEnumerator Wait(float time, Action onComplete)
+    {
+        yield return new WaitForSeconds(time);
+        onComplete();
     }
 }

@@ -40,12 +40,18 @@ public class WeaponsManagerController : MonoBehaviour
         Rigidbody rigidbody = primary.GetComponent<Rigidbody>();
          Destroy (rigidbody);
 
+         weapon.GetTransform.rotation =  transform.rotation;
 
          if (weapon.Name == pickUpModel.TranquilizerGun)
          {
              GunController gunController = weapon.GetTransform.GetComponent<GunController>();
              gunController.enabled = true;
          }
+         else
+         {
+             weapon.GetTransform.RotateAround (weapon.GetTransform.position, transform.up, 180f);
+         }
+         
     }
 
 

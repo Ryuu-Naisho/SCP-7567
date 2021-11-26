@@ -25,13 +25,18 @@ public class PickUpUtil : MonoBehaviour
     private PlayerController playerController;
     private TagModel tags;
     private NameModel names;
-    // Start is called before the first frame update
-    void Start()
-    {
+
+
+         void Awake()
+     {
         tags = new TagModel();
         names = new NameModel();
         pickUpModel = new PickUpModel();
         hintModel = new HintModel();
+     }
+    // Start is called before the first frame update
+    void Start()
+    {
         GameObject playerObject = GameObject.Find(names.Player);
         playerController = playerObject.GetComponent<PlayerController>();
         SetItemType();
