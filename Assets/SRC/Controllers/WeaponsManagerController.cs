@@ -47,9 +47,11 @@ public class WeaponsManagerController : MonoBehaviour
              GunController gunController = weapon.GetTransform.GetComponent<GunController>();
              gunController.enabled = true;
          }
-         else
+         else if (weapon.Name == pickUpModel.Flamethrower)
          {
              weapon.GetTransform.RotateAround (weapon.GetTransform.position, transform.up, 180f);
+             FlameThrowerController flameThrowerController = weapon.GetTransform.GetComponent<FlameThrowerController>();
+             flameThrowerController.enabled = true;
          }
          
     }

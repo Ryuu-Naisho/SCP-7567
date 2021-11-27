@@ -99,8 +99,6 @@ public class InventoryUtil:  MonoBehaviour
 
     public void RemoveByCount(ItemStruct item, int maxCount)
     {
-        int count = 0;
-
         for (int i = 0; i < maxCount; i++)
         {
             RemoveOne(item);
