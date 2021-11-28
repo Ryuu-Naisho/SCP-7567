@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     private GUIController _Gui;
     private InventoryUtil inventory;
     private NameModel names;
+    private EventModel eventModel;
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = GetComponent<InventoryUtil>();
         names = new NameModel();
+        eventModel = new EventModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
     }
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown("z"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/ConcreteStep");
+            FMODUnity.RuntimeManager.PlayOneShot(eventModel.ConcreteStep);
         }
     }
 

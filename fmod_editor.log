@@ -13,7 +13,7 @@
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
-[LOG] AsyncManager::init                       : manager 0x55cc877e2248 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x55fef0fa78b8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -22,3 +22,53 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4224
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 2752
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fb63191fb2c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fb6567d8d60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fb6567d8c90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fb6567d8cc0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fb6567d8c60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fb5780043e8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps, Human, Asphalt, Male, Walk SND11513 6', format=5, channels=1, frequency=48000, lengthbytes=2176, lengthpcm=11056, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118763.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4224
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 2752
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fb63191fb2c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fb6567d8d60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fb6567d8c90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fb6567d8cc0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fb6567d8c60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fb5780043e8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Footsteps, Human, Asphalt, Male, Walk SND11513 7', format=5, channels=1, frequency=48000, lengthbytes=1824, lengthpcm=8954, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137021.
+[LOG] SoundI::release                          :  (0x7fb578011968)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 6 (0x7fb578011ad8)
+[LOG] SoundI::release                          :  (0x7fb5780126d8)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 7 (0x7fb578012848)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
