@@ -63,11 +63,15 @@
     <Compile Include="Assets\SRC\Models\NameModel.cs" />
     <Compile Include="Assets\SRC\Models\TagModel.cs" />
     <Compile Include="Assets\SRC\Utils\AudioUtil.cs" />
+    <Compile Include="Assets\SRC\Controllers\GunController.cs" />
     <Compile Include="Assets\SRC\Controllers\WeaponsManagerController.cs" />
     <Compile Include="Assets\SRC\Controllers\GUIController.cs" />
     <Compile Include="Assets\SRC\Controllers\wCharacterController.cs" />
+    <Compile Include="Assets\SRC\Controllers\ProjectileController.cs" />
     <Compile Include="Assets\SRC\Utils\ItemStruct.cs" />
     <Compile Include="Assets\SRC\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\SRC\Models\EventModel.cs" />
+    <Compile Include="Assets\SRC\Controllers\FlameThrowerController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
