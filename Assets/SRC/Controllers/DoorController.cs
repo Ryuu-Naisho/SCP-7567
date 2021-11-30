@@ -20,20 +20,35 @@ public class DoorController : MonoBehaviour
     }
 
 
-        private void OnTriggerEnter(Collider other)
+    private bool AllowThrough(string _tag)
+    {
+        bool _allow = false;
+        if (_tag == tags.Player || _tag == tags.NpcInfected|| _tag == tags.NPCNonInfected)
+        {
+            _allow = true;
+        }
+
+        return _allow;
+
+    }
+
+
+
+    private void OnTriggerEnter(Collider other)
     {
         string _tag = other.tag;
-        if (_tag == tags.Player)
+        if (AllowThrough(_tag))
         {
             doorTransform.Rotate(0.0f, 90.0f, 0.0f, Space.World);
         }
+        Debug.Log(_tag);
     }
 
 
     private void OnTriggerExit(Collider other)
     {
         string _tag = other.tag;
-        if (_tag == tags.Player)
+        if (AllowThrough(_tag))
         {
             doorTransform.Rotate(0.0f, -90.0f, 0.0f, Space.World);
         }

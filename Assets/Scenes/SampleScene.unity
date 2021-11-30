@@ -1694,22 +1694,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.506626, y: 2.878312, z: 0.15605469}
   m_Center: {x: 0.7533154, y: 1.439156, z: -0.078027345}
---- !u!208 &962595231
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962595229}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.75, y: 1.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0.7, y: 1.4, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1001 &1049296628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2671,8 +2655,24 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1, y: 2.5, z: 1}
+  m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!54 &1675883681
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675883676}
+  serializedVersion: 2
+  m_Mass: 150
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1715791865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3010,6 +3010,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
       propertyPath: m_Name
       value: LabPersonel_Infected
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
+      propertyPath: m_TagString
+      value: NpcInfected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433966419534284196, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
+      propertyPath: m_TagString
+      value: NpcInfected
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
