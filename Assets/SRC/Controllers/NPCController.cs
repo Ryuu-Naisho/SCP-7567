@@ -7,6 +7,7 @@ public class NPCController : MonoBehaviour
 {
     [SerializeField] private int ChaseRange;
     [SerializeField] private int AttackRange;
+    [SerializeField] private int FOV;
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
     private Transform playerTransform;
@@ -15,13 +16,20 @@ public class NPCController : MonoBehaviour
     private bool canMove = true;
     private bool attack = false;
     private bool idle = true;
+    private IndexerUtil indexerUtil;
     private NameModel names;
+    private PathUtil pathUtil;
+    private Transform POV;
+    private Transform TargetTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         names = new NameModel();
+        pathUtil = new PathUtil();
+        indexerUtil = new IndexerUtil();
         GameObject playerGameObject = GameObject.Find(names.Player);
+        POV = transform.Find(names.POV);
         playerTransform = playerGameObject.transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
@@ -32,10 +40,10 @@ public class NPCController : MonoBehaviour
         if (canMove)
         {
             PlayerFinder();
-
-            if(chase)
+            Sentry();
+            if (chase)
             {
-                goToPoint(playerTransform.position);
+                goToPoint(TargetTransform.position);
             }
             if (attack)
             {
@@ -44,8 +52,30 @@ public class NPCController : MonoBehaviour
             
             if (!chase && !attack && idle)
             {
-                //TODO idle
+                Idle();
             }
+        }
+    }
+
+
+    private void Idle()
+    {
+        if (!Navigating())
+        {
+            goToPoint(pathUtil.GetDestination());
+        }
+    }
+
+
+    private void Sentry()
+    {
+        Transform tInView = indexerUtil.InView(POV, FOV, 10);
+        if (tInView == null)
+            return;
+        if (tInView.tag == "Player")
+        {
+             chase = true;
+             TargetTransform = tInView;
         }
     }
 
@@ -58,6 +88,7 @@ public class NPCController : MonoBehaviour
             {
                 idle = false;
                 chase = true;
+                TargetTransform = playerTransform;
             }
         }
         else if (distance<= (agent.stoppingDistance * agent.stoppingDistance)+1) {
@@ -71,12 +102,25 @@ public class NPCController : MonoBehaviour
                 chase = false;
             }
         }
-        else if (distance >= ChaseRange*ChaseRange)
+    }
+
+
+    private bool Navigating()
+    {
+        bool navigating = true;
+
+         if (!agent.pathPending)
         {
-            idle = true;
-            chase = false;
-            attack = false;
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                {
+                    navigating = false;
+                }
+            }
         }
+
+        return navigating;
     }
 
 

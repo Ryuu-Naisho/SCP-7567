@@ -632,6 +632,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a40a791423f8fdd48a629a71f4ad0624, type: 3}
+--- !u!1 &298765860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 298765861}
+  m_Layer: 0
+  m_Name: POV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &298765861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298765860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.031, y: 2.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1675883677}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &378924924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2636,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
   m_PrefabInstance: {fileID: 2000357290}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1675883677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
+  m_PrefabInstance: {fileID: 2000357290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1675883678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,8 +2653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0e8ca047b67083b851d81bff19a12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChaseRange: 20
+  ChaseRange: 5
   AttackRange: 3
+  FOV: 0
   health: 10
   stunnedTime: 1
 --- !u!195 &1675883679
@@ -2636,7 +2672,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2669,7 +2705,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

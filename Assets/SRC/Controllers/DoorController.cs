@@ -41,7 +41,6 @@ public class DoorController : MonoBehaviour
         {
             doorTransform.Rotate(0.0f, 90.0f, 0.0f, Space.World);
         }
-        Debug.Log(_tag);
     }
 
 
