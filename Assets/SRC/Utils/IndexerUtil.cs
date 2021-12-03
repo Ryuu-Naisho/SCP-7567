@@ -12,7 +12,6 @@ public class IndexerUtil
         RaycastHit hit;
         if (Physics.SphereCast(viewTransform.position, radius, viewTransform.forward, out hit, FOV))
         {
-            Debug.Log(hit.transform.tag);
             tInView = hit.transform;
         }
 

@@ -1,5 +1,143 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8192124168334803019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Flamethrower/Flamethrower_Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Flamethrower/Flamethrower_Shoot
+  guid: 512884360fd4a94e9fc4e345fe119a63
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11597
+--- !u!114 &-8099663318791477464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Hallways
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Hallways
+  guid: c560c2c72987e644abd30fd95ba14254
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 234984
+--- !u!114 &-7276373111564309016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Lockers
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Lockers
+  guid: 4ada9c97004e6c46a773e6408f022d8b
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 236672
+--- !u!114 &-6939052044164006502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Cell
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Cell
+  guid: 4ff5d78d8e8d9f4b8adda5921260dc72
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 226207
+--- !u!114 &-5671301974864487793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Switching_Guns
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Switching_Guns
+  guid: ebf8027867e7634cb77eb93f73d8ae24
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1809
+--- !u!114 &-5383190111388925020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Armory
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Armory
+  guid: fef6356b5f8dbd4c8ec2de74b6e234a5
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 237933
 --- !u!114 &-3961514365559822073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +161,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 315
+--- !u!114 &-638675344899549611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Reload
+  guid: 743c5ac1c667de46bc30ecec75edc143
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1447
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,13 +201,75 @@ MonoBehaviour:
   - {fileID: 1339391324832955277}
   EditorEvents:
   - {fileID: -3961514365559822073}
+  - {fileID: 1779089346114983162}
+  - {fileID: 6073463929669251543}
+  - {fileID: 672755653736762158}
+  - {fileID: -7276373111564309016}
+  - {fileID: -6939052044164006502}
+  - {fileID: -8192124168334803019}
+  - {fileID: -638675344899549611}
+  - {fileID: 3140528074284457902}
+  - {fileID: 4610370439757440441}
+  - {fileID: 7613828428949020683}
+  - {fileID: 5838872917834296286}
+  - {fileID: 1900348851129872579}
+  - {fileID: 1301052052813659237}
+  - {fileID: -8099663318791477464}
+  - {fileID: -5671301974864487793}
+  - {fileID: -5383190111388925020}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1339391324832955277}
   StringsBanks:
   - {fileID: 8912408686893941275}
-  stringsBankWriteTime: 637736383090000000
+  stringsBankWriteTime: 637740376900000000
   cacheVersion: 8
+--- !u!114 &672755653736762158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Research
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Research
+  guid: 47154b76db45e448a9b69980f2bc61a4
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 236462
+--- !u!114 &1301052052813659237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Office
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Office
+  guid: c3052c600c18e94ea8140c38ab65a204
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 249134
 --- !u!114 &1339391324832955277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,9 +285,170 @@ MonoBehaviour:
   Path: Assets/Resources/Audio/FMOD_ASSETS/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637736383090000000
+  lastModified: 637740376900000000
   FileSizes: []
   Exists: 1
+--- !u!114 &1779089346114983162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Keycard/Keycard_Error
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Keycard/Keycard_Error
+  guid: 07c860af40930246a8b306774f01caed
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1871
+--- !u!114 &1900348851129872579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Ambience/Amb_Janitory
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Ambience/Amb_Janitory
+  guid: c2ca8780c0a1ff43aa1b6bcdc1ca1b66
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 238471
+--- !u!114 &3140528074284457902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Keycard/Keycard_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Keycard/Keycard_Pickup
+  guid: 75c54d85a9d25f4185a957382f1a6a62
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 545
+--- !u!114 &4610370439757440441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Keycard/Keycard_Open
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Keycard/Keycard_Open
+  guid: 83acf86b6a3c984c8ebd87da7948cab4
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1765
+--- !u!114 &5838872917834296286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Pickup
+  guid: bbdea0cf55366a42b2d1e5dd4d888c8f
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1118
+--- !u!114 &6073463929669251543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Shoot
+  guid: 410cab8d47725042b10f2a1c57f0f9c3
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1760
+--- !u!114 &7613828428949020683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Flamethrower/Flamethrower_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Flamethrower/Flamethrower_Pickup
+  guid: ad22c912e2fd104f95938d11e03a608e
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1771
 --- !u!114 &8912408686893941275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,8 +464,8 @@ MonoBehaviour:
   Path: Assets/Resources/Audio/FMOD_ASSETS/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637736383090000000
+  lastModified: 637740376900000000
   FileSizes:
   - Name: 
-    Value: 756
+    Value: 1540
   Exists: 1

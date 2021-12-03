@@ -10,6 +10,7 @@ public class NPCController : MonoBehaviour
     [SerializeField] private int FOV;
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
+    [SerializeField] private bool ignorePlayer;
     private Transform playerTransform;
     private UnityEngine.AI.NavMeshAgent agent;
     private bool chase = false;
@@ -18,9 +19,11 @@ public class NPCController : MonoBehaviour
     private bool idle = true;
     private IndexerUtil indexerUtil;
     private NameModel names;
+    private NINPCController NINPCC;
     private PathUtil pathUtil;
     private Transform POV;
     private Transform TargetTransform;
+    private TagModel tags;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class NPCController : MonoBehaviour
         names = new NameModel();
         pathUtil = new PathUtil();
         indexerUtil = new IndexerUtil();
+        tags = new TagModel();
         GameObject playerGameObject = GameObject.Find(names.Player);
         POV = transform.Find(names.POV);
         playerTransform = playerGameObject.transform;
@@ -69,19 +73,29 @@ public class NPCController : MonoBehaviour
 
     private void Sentry()
     {
-        Transform tInView = indexerUtil.InView(POV, FOV, 10);
+        Transform tInView = indexerUtil.InView(POV, FOV, FOV);
         if (tInView == null)
             return;
-        if (tInView.tag == "Player")
+        if (tInView.tag == tags.Player && !ignorePlayer)
         {
              chase = true;
              TargetTransform = tInView;
+        }
+        else if (tInView.tag == tags.NPCNonInfected)
+        {
+            chase = true;
+            TargetTransform = tInView;
+            NINPCC = TargetTransform.GetComponent<NINPCController>();
+            NINPCC.Chase();
+            Debug.Log("Infected NPC is chasing.");
         }
     }
 
 
     private void PlayerFinder()
     {
+        if (ignorePlayer)
+            return;
         float distance = (playerTransform.position-this.transform.position).sqrMagnitude;
         if (distance<ChaseRange*ChaseRange && distance > AttackRange*AttackRange) {
             if (!chase)
