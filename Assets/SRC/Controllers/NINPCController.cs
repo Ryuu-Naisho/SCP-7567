@@ -6,6 +6,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
+[RequireComponent(typeof (AnimatorUtil))]
 public class NINPCController : MonoBehaviour
 { 
 
@@ -16,11 +17,14 @@ public class NINPCController : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
     [SerializeField] private float endurance;
+    private AnimatorUtil animator;
     private UnityEngine.AI.NavMeshAgent agent;
     private bool flee = false;
     private bool canMove = true;
+    private float h;
     private bool idle = true;
     private bool isHiding = false;
+    private bool ishidingCooldown = false;
     private IndexerUtil indexerUtil;
     private NameModel names;
     private PathUtil pathUtil;
@@ -39,11 +43,24 @@ public class NINPCController : MonoBehaviour
         tags = new TagModel();
         POV = transform.Find(names.POV);
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        animator = GetComponent<AnimatorUtil>();
+        h = GetComponent<BoxCollider>().size.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(agent.velocity.magnitude > 0.15f)
+        {
+            idle = false;
+        }
+        else
+        {
+            idle = true;
+        }
+
+
+
         if (canMove)
         {
             if (flee)
@@ -56,7 +73,31 @@ public class NINPCController : MonoBehaviour
             }
         }
 
+        if (isHiding)
+        {
+            if (!Navigating())
+                animator.Hide();
+        }
+
         VisLoc();
+        Animate();
+    }
+
+
+    private void Animate()
+    {
+        if (flee)
+        {
+            animator.Run();
+        }
+        else if (!flee && !idle)
+        {
+            animator.Walk();
+        }
+        else if (idle)
+        {
+            animator.Idle();
+        }
     }
 
 
@@ -74,9 +115,10 @@ public class NINPCController : MonoBehaviour
 
     private void Flee()
     {
-        Debug.Log("Non-Infected is Fleeing");
+        
         if (!flee)
         {
+            isHiding = false;
             clr();
             Vector3 destination = GetTarget();
             goToPoint(destination);
@@ -100,13 +142,30 @@ public class NINPCController : MonoBehaviour
 
     private void Hide()
     {
+        if (flee || ishidingCooldown)
+            return;
         clr();
+        agent.isStopped = true;
         isHiding = true;
         goToPoint(TargetTransform.position);
         float atpTime = getAnticipationTime();
         Action rel = ()=>{
+            agent.isStopped= false;
             isHiding = false;
+            HidingCooldown();
         };
+        StartCoroutine(Wait(atpTime, rel));
+    }
+
+
+    private void HidingCooldown()
+    {
+        ishidingCooldown = true;
+        Action rel = ()=>
+        {
+            ishidingCooldown = false;
+        };
+        float atpTime = getAnticipationTime();
         StartCoroutine(Wait(atpTime, rel));
     }
 
@@ -114,7 +173,7 @@ public class NINPCController : MonoBehaviour
     private float getAnticipationTime()
     {
         float[] times = new float[]{1f, 2f, 3f, 4f, 5f};
-        int index = UnityEngine.Random.Range(0, times.Length + 1);
+        int index = UnityEngine.Random.Range(0, times.Length );
         return times[index];
     }
 
@@ -152,7 +211,7 @@ public class NINPCController : MonoBehaviour
 
     private void VisLoc()
     {
-        Transform tInView = indexerUtil.InView(POV, FOV, 10);
+        Transform tInView = indexerUtil.InView(POV, FOV, h);
         if (tInView == null)
             return;
         if (tInView.tag == tags.Env)
@@ -161,6 +220,21 @@ public class NINPCController : MonoBehaviour
              Hide();
         }
         else if (tInView.tag == tags.NpcInfected)
+        {
+            Flee();
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        string _tag = other.tag;
+        if (_tag == tags.Env)
+        {
+            TargetTransform = other.transform;
+            Hide();
+        }
+        else if (_tag == tags.NpcInfected)
         {
             Flee();
         }

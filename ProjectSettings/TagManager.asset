@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPCNonInfected
   - NpcInfected
+  - Env
   layers:
   - Default
   - TransparentFX

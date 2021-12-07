@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
+[RequireComponent(typeof(AnimatorUtil))]
 public class NPCController : MonoBehaviour
 {
     [SerializeField] private int ChaseRange;
@@ -11,11 +12,13 @@ public class NPCController : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
     [SerializeField] private bool ignorePlayer;
+    private AnimatorUtil animator;
     private Transform playerTransform;
     private UnityEngine.AI.NavMeshAgent agent;
     private bool chase = false;
     private bool canMove = true;
     private bool attack = false;
+    private float h;
     private bool idle = true;
     private IndexerUtil indexerUtil;
     private NameModel names;
@@ -36,6 +39,8 @@ public class NPCController : MonoBehaviour
         POV = transform.Find(names.POV);
         playerTransform = playerGameObject.transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        animator = GetComponent<AnimatorUtil>();
+        h = GetComponent<BoxCollider>().size.y;
     }
 
     // Update is called once per frame
@@ -43,6 +48,17 @@ public class NPCController : MonoBehaviour
     {
         if (canMove)
         {
+            if(agent.velocity.magnitude > 0.15f)
+            {
+                idle = false;
+            }
+            else
+            {
+                idle = true;
+            }
+
+
+
             PlayerFinder();
             Sentry();
             if (chase)
@@ -59,6 +75,26 @@ public class NPCController : MonoBehaviour
                 Idle();
             }
         }
+
+
+        Animate();
+    }
+
+
+    private void Animate()
+    {
+        if (chase)
+        {
+            animator.Run();
+        }
+        else if (!chase && !idle)
+        {
+            animator.Walk();
+        }
+        else if (idle)
+        {
+            animator.Idle();
+        }
     }
 
 
@@ -73,7 +109,7 @@ public class NPCController : MonoBehaviour
 
     private void Sentry()
     {
-        Transform tInView = indexerUtil.InView(POV, FOV, FOV);
+        Transform tInView = indexerUtil.InView(POV, FOV, h);
         if (tInView == null)
             return;
         if (tInView.tag == tags.Player && !ignorePlayer)
@@ -87,7 +123,6 @@ public class NPCController : MonoBehaviour
             TargetTransform = tInView;
             NINPCC = TargetTransform.GetComponent<NINPCController>();
             NINPCC.Chase();
-            Debug.Log("Infected NPC is chasing.");
         }
     }
 
