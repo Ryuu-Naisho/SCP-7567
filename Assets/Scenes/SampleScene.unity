@@ -1489,6 +1489,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &787589602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4002164533997047090, guid: 7ee002792efd1844697c623c63a8b327, type: 3}
+  m_PrefabInstance: {fileID: 367415884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &787589604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787589602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62bf76990257dbf0a068ce94659693a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &809848578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1920,9 +1937,9 @@ GameObject:
   - component: {fileID: 1147124011}
   - component: {fileID: 1147124010}
   - component: {fileID: 1147124009}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2415,6 +2432,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 2, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1572954411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -751476226918971245, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
+  m_PrefabInstance: {fileID: 2000357290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1572954413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572954411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62bf76990257dbf0a068ce94659693a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589081764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,7 +2839,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!65 &1675883680
@@ -2820,7 +2854,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.5, z: 1}
-  m_Center: {x: 0, y: 1.25, z: 0}
+  m_Center: {x: 0, y: 1.3, z: 0}
 --- !u!54 &1675883681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2925,6 +2959,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcf3565b4fcff14438582e4ae0744dd8, type: 3}
+--- !u!1 &1780237306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2380699927652827413, guid: 7ee002792efd1844697c623c63a8b327, type: 3}
+  m_PrefabInstance: {fileID: 367415884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1780237308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780237306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62bf76990257dbf0a068ce94659693a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1784766998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3208,7 +3259,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &1996368239 stripped
@@ -3414,6 +3465,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012105936}
   m_CullTransparentMesh: 1
+--- !u!1 &2023301128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2084811680363313996, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
+  m_PrefabInstance: {fileID: 2000357290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023301130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023301128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62bf76990257dbf0a068ce94659693a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092910572 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2433966419534284196, guid: 550026224131a7445863b6ea3f5d1f0e, type: 3}
