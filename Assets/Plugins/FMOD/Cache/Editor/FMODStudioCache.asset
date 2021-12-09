@@ -155,11 +155,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 1339391324832955277}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 315
 --- !u!114 &-638675344899549611
 MonoBehaviour:
@@ -285,7 +285,7 @@ MonoBehaviour:
   Path: Assets/Resources/Audio/FMOD_ASSETS/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637740376900000000
+  lastModified: 637746708570000000
   FileSizes: []
   Exists: 1
 --- !u!114 &1779089346114983162

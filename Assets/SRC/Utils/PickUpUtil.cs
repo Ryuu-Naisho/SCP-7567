@@ -11,11 +11,14 @@ internal enum EnumItemType
     TapeRecorder
 }
 
+
+
 public class PickUpUtil : MonoBehaviour
 {
     [SerializeField] private EnumItemType enumItemType;
     private bool canPickUp = false;
     private bool collected = false;
+    private EventModel eventModel;
     private GUIController _Gui;
     private HintModel hintModel;
     private bool isWeapon = false;
@@ -23,6 +26,7 @@ public class PickUpUtil : MonoBehaviour
     private string itemType;
     private PickUpModel pickUpModel;
     private PlayerController playerController;
+    private string soundEvent;
     private TagModel tags;
     private NameModel names;
 
@@ -33,6 +37,7 @@ public class PickUpUtil : MonoBehaviour
         names = new NameModel();
         pickUpModel = new PickUpModel();
         hintModel = new HintModel();
+        eventModel = new EventModel();
      }
     // Start is called before the first frame update
     void Start()
@@ -56,6 +61,7 @@ public class PickUpUtil : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 playerController.PickUpItem(itemStruct);
+                DoSound();
                 _Gui.clearHint();
                 if (!isWeapon)
                     Destroy(gameObject);
@@ -66,16 +72,26 @@ public class PickUpUtil : MonoBehaviour
     }
 
 
+    private void DoSound()
+    {
+        if (soundEvent == null)
+            return;
+        FMODUnity.RuntimeManager.PlayOneShot(soundEvent);
+    }
+
+
     private void SetItemType()
     {
         switch(this.enumItemType)
         {
             case EnumItemType.ArmoryKey:
                 itemType = pickUpModel.ArmoryKey;
+                soundEvent = eventModel.Keycard_pickup;
                 break;
             case EnumItemType.Flamethrower:
                 isWeapon = true;
                 itemType = pickUpModel.Flamethrower;
+                soundEvent = eventModel.Flamethrower_Pickup;
                 break;
             case EnumItemType.Note:
                 itemType = pickUpModel.Note;
@@ -89,6 +105,7 @@ public class PickUpUtil : MonoBehaviour
             case EnumItemType.TranquilizerGun:
                 isWeapon = true;
                 itemType = pickUpModel.TranquilizerGun;
+                soundEvent = eventModel.Tranq_Gun_Pickup;
                 break;
                 
             }
