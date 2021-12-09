@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\SRC\Models\HintModel.cs" />
     <Compile Include="Assets\SRC\Utils\InventoryUtil.cs" />
+    <Compile Include="Assets\SRC\Controllers\NINPCController.cs" />
     <Compile Include="Assets\SRC\Models\PickUpModel.cs" />
     <Compile Include="Assets\SRC\Utils\PickUpUtil.cs" />
+    <Compile Include="Assets\SRC\Utils\AnimatorUtil.cs" />
     <Compile Include="Assets\SRC\Utils\PathUtil.cs" />
     <Compile Include="Assets\SRC\Controllers\NPCController.cs" />
     <Compile Include="Assets\SRC\Models\NameModel.cs" />
