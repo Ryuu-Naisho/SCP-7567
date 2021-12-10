@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponsManagerController : MonoBehaviour
 {
+    [SerializeField] private Transform hTransform;
     private GameObject primary;
     private GameObject secondary;
     private PickUpModel pickUpModel;
@@ -66,7 +67,8 @@ public class WeaponsManagerController : MonoBehaviour
     private void SetAsPrimary(GameObject weapon)
     {
         primary = weapon;
-        primary.transform.parent = transform;
+        primary.transform.parent = hTransform;
+        primary.transform.position = hTransform.position;
         primary.SetActive(true);
     }
 
