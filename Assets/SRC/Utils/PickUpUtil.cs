@@ -120,6 +120,10 @@ public class PickUpUtil : MonoBehaviour
         {
             if (!collected)
             {
+                if (_Gui == null)
+                {
+                   return;
+                }
                 try
                 {
                 _Gui.SetHint(hintModel.PressEToPickUP);
@@ -147,6 +151,10 @@ public class PickUpUtil : MonoBehaviour
         string _tag = other.tag;
         if (_tag == tags.Player)
         {
+            if (_Gui == null)
+            {
+               return;
+            }
             try
             {
             _Gui.clearHint();
