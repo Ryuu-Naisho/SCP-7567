@@ -17,6 +17,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private GameObject projectile;
     [SerializeField] private float reloadSpeed;
     private string bulletType;
+    private EventModel eventModel;
     private bool reloading = false;
     private bool coolingDown = false;
     private int currentChamberCount = 0;
@@ -30,6 +31,7 @@ public class GunController : MonoBehaviour
     {
         pickUpModel = new PickUpModel();
         names = new NameModel();
+        eventModel = new EventModel();
         SetItemType();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
@@ -95,6 +97,7 @@ public class GunController : MonoBehaviour
         PickUpUtil pickUpUtil = projectileObject.GetComponent<PickUpUtil>();
         pickUpUtil.enabled = false;
         currentChamberCount --;
+        FMODUnity.RuntimeManager.PlayOneShot(eventModel.Tranq_Gun_Shoot);
         CoolDown();
     }
 
@@ -133,6 +136,7 @@ public class GunController : MonoBehaviour
             currentChamberCount = ammountToChamber;
             ItemStruct item = new ItemStruct(bulletType);
             inventoryUtil.RemoveByCount(item, ammountToChamber);
+            FMODUnity.RuntimeManager.PlayOneShot(eventModel.Tranq_Gun_Reload);
 
             Action startFire = ()=>
             {
