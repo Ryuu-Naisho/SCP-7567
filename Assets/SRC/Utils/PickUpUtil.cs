@@ -97,6 +97,7 @@ public class PickUpUtil : MonoBehaviour
                 break;
             case EnumItemType.FlamethrowerCanister:
                 itemType = pickUpModel.FlamethrowerCanister;
+                break;
             case EnumItemType.Note:
                 itemType = pickUpModel.Note;
                 break;

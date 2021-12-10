@@ -186,3 +186,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelLevel: 10
   fuelBurnRate: 1
+  reloadSpeed: 2

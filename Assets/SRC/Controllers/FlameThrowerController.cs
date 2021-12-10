@@ -28,6 +28,7 @@ public class FlameThrowerController : MonoBehaviour
         eventModel = new EventModel();
         pickUpModel = new PickUpModel(); 
         maxFuelLevel = fuelLevel;
+        fuelLevel = 0;
         names = new NameModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
@@ -165,7 +166,7 @@ public class FlameThrowerController : MonoBehaviour
     }
 
 
-    
+
     private IEnumerator Wait(float time, Action onComplete)
     {
         yield return new WaitForSeconds(time);
