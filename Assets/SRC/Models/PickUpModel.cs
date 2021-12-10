@@ -6,6 +6,7 @@ public class PickUpModel
 {
     private const string _armoryKey = "Armory Key";
     private const string _flamethrower = "Flamethrower";
+    private const string _flamethrowerCanister = "FlamethrowerCanister";
     private const string _tranqDart = "Tranq Dart";
     private const string _tranquilizerGun = "Tranquilizer Gun";
     private const string _note = "Note";
@@ -14,6 +15,7 @@ public class PickUpModel
 
     public string ArmoryKey => _armoryKey;
     public string Flamethrower => _flamethrower;
+    public string FlamethrowerCanister => _flamethrowerCanister;
     public string TranqDart => _tranqDart;
     public string TranquilizerGun => _tranquilizerGun;
     public string Note => _note;

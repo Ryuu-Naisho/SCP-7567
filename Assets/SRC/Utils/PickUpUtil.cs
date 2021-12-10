@@ -6,6 +6,7 @@ internal enum EnumItemType
 {
     ArmoryKey,
     Flamethrower,
+    FlamethrowerCanister,
     TranqDart,
     TranquilizerGun,
     Note,
@@ -94,6 +95,8 @@ public class PickUpUtil : MonoBehaviour
                 itemType = pickUpModel.Flamethrower;
                 soundEvent = eventModel.Flamethrower_Pickup;
                 break;
+            case EnumItemType.FlamethrowerCanister:
+                itemType = pickUpModel.FlamethrowerCanister;
             case EnumItemType.Note:
                 itemType = pickUpModel.Note;
                 break;
