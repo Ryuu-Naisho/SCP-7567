@@ -11,6 +11,7 @@ public class FlameThrowerController : MonoBehaviour
     private EventModel eventModel;
     private bool firing = false;
     private bool burningFuel = false;
+    private GameObject Flame;
     private GUIController _Gui;
     private FMOD.Studio.EventInstance instance;
     private InventoryUtil inventoryUtil;
@@ -32,6 +33,7 @@ public class FlameThrowerController : MonoBehaviour
         names = new NameModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
+        Flame = transform.Find(names.FlamethrowerFlame).gameObject;
     }
 
 
@@ -84,6 +86,7 @@ public class FlameThrowerController : MonoBehaviour
 
     private void ceaseFire()
     {
+        Flame.SetActive(false);
         if (soundPlaying)
             StopSound();
         firing = false;
@@ -108,7 +111,7 @@ public class FlameThrowerController : MonoBehaviour
         {
             return;
         }
-
+        Flame.SetActive(true);
         if (!soundPlaying)
             StartSound();
         if (!firing)
