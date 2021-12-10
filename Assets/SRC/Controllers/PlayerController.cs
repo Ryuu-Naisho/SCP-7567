@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(InventoryUtil))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private Camera firstPersonCamera;
+    [SerializeField] private Camera overheadCamera;
     private GUIController _Gui;
     private InventoryUtil inventory;
     private NameModel names;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
         eventModel = new EventModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
+        ShowFirstPersonView();
     }
 
     // Update is called once per frame
@@ -63,5 +66,17 @@ public class PlayerController : MonoBehaviour
     private void DisposeItem(ItemStruct item)
     {
         inventory.RemoveOne(item);
+    }
+
+
+    private void ShowOverheadView() {
+        firstPersonCamera.enabled = false;
+        overheadCamera.enabled = true;
+    }
+
+
+    private void ShowFirstPersonView() {
+        firstPersonCamera.enabled = true;
+        overheadCamera.enabled = false;
     }
 }
