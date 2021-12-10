@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 internal enum EnumItemType
 {
@@ -119,7 +120,15 @@ public class PickUpUtil : MonoBehaviour
         {
             if (!collected)
             {
+                try
+                {
                 _Gui.SetHint(hintModel.PressEToPickUP);
+                }
+                catch(NullReferenceException e)
+                {
+                    Debug.Log(e);
+                    return;
+                }
                 canPickUp = true;
                 if (isWeapon)
                 {
@@ -138,7 +147,15 @@ public class PickUpUtil : MonoBehaviour
         string _tag = other.tag;
         if (_tag == tags.Player)
         {
+            try
+            {
             _Gui.clearHint();
+            }
+            catch(NullReferenceException e)
+            {
+                Debug.Log(e);
+                return;
+            }
             canPickUp = false;
         }
     }
