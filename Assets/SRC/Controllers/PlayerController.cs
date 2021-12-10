@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Camera firstPersonCamera;
     [SerializeField] private Camera overheadCamera;
+    [SerializeField] private int MaxFlamethrowerCanisterCapacity;
     private GUIController _Gui;
     private InventoryUtil inventory;
     private NameModel names;
+    private PickUpModel pickUpModel;
     private EventModel eventModel;
 
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         inventory = GetComponent<InventoryUtil>();
         names = new NameModel();
+        pickUpModel = new PickUpModel();
         eventModel = new EventModel();
         GameObject GUIObject = GameObject.Find(names.GUI);
         _Gui = GUIObject.GetComponent<GUIController>();
@@ -60,6 +63,19 @@ public class PlayerController : MonoBehaviour
         inventory.Add(item);
         string msg = item.ToString() + " has been collected.";
         _Gui.writeDebug(msg);
+    }
+
+
+    public bool ReachedCanisterCap()
+    {
+        if (inventory.GetCountByValue(pickUpModel.FlamethrowerCanister) >= MaxFlamethrowerCanisterCapacity)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 

@@ -62,13 +62,16 @@ public class PickUpUtil : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                playerController.PickUpItem(itemStruct);
-                DoSound();
-                _Gui.clearHint();
-                if (!isWeapon)
-                    Destroy(gameObject);
-                collected = true;
-                canPickUp = false;
+                if (itemType == pickUpModel.FlamethrowerCanister)
+                {
+                    if (!playerController.ReachedCanisterCap())
+                        PickUp();
+                }
+                else
+                {
+                    PickUp();
+                }
+                
             }
         }   
     }
@@ -79,6 +82,18 @@ public class PickUpUtil : MonoBehaviour
         if (soundEvent == null)
             return;
         FMODUnity.RuntimeManager.PlayOneShot(soundEvent);
+    }
+
+
+    private void PickUp()
+    {
+        playerController.PickUpItem(itemStruct);
+        DoSound();
+        _Gui.clearHint();
+        if (!isWeapon)
+            Destroy(gameObject);
+        collected = true;
+        canPickUp = false;
     }
 
 

@@ -184,6 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f33ded80b8b5063b48151efbfd67d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelLevel: 10
+  fuelLevel: 5
   fuelBurnRate: 1
   reloadSpeed: 2
