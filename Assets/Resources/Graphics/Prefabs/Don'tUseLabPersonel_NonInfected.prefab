@@ -1214,7 +1214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5985689485439856237}
   m_Layer: 0
-  m_Name: LabPersonel_NonInfected
+  m_Name: Don'tUseLabPersonel_NonInfected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,10 +17,12 @@ public class NINPCController : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
     [SerializeField] private float endurance;
+    [SerializeField] private GameObject infectedPRF;
     private AnimatorUtil animator;
     private UnityEngine.AI.NavMeshAgent agent;
     private bool flee = false;
     private bool canMove = true;
+    private bool converted = false;
     private float h;
     private bool idle = true;
     private bool isHiding = false;
@@ -104,6 +106,16 @@ public class NINPCController : MonoBehaviour
     public void Chase()
     {
         Flee();
+    }
+
+
+    public void Convert()
+    {
+        if (converted)
+            return;
+        converted = true;
+        Instantiate(infectedPRF, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
     private void Escape()

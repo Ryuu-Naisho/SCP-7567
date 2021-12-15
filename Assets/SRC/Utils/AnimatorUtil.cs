@@ -8,6 +8,7 @@ public class AnimatorUtil : MonoBehaviour
 {
     private Animator animator;
     private string[] HideArr = new string[]{"hide1","hide2"};
+    private string[] AttArr = new string[]{"attack","attack2"};
     // Start is called before the first frame update
     
     
@@ -29,6 +30,8 @@ public class AnimatorUtil : MonoBehaviour
         string animation = "";
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("attack"))
             animation = "attack";
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("attack2"))
+            animation = "attack2";
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
             animation = "idle";
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("walk"))
@@ -48,7 +51,9 @@ public class AnimatorUtil : MonoBehaviour
 
     public void Attack()
     {
-        animator.SetTrigger("attack");
+        int index = Random.Range(0, AttArr.Length);
+        string AttackAnimation = AttArr[index];
+        animator.SetTrigger(AttackAnimation);
     }
 
 

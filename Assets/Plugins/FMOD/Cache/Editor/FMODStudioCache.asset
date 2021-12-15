@@ -23,6 +23,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11597
+--- !u!114 &-8107855471433861111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Flamethrower/Flamethrower_Fuel_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Flamethrower/Flamethrower_Fuel_Pickup
+  guid: 0bd1365a95ce954b806c27622c824df5
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1494
 --- !u!114 &-8099663318791477464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +161,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 237933
+--- !u!114 &-5058336353548109190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Flamethrower/Flamethrower_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Flamethrower/Flamethrower_Reload
+  guid: 5c27e3ce836b4c42a05d799a8bc4976d
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-4975882453966044440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Note/Note_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Note/Note_Pickup
+  guid: c31561cd225a3d448fb0516667076458
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 791
 --- !u!114 &-3961514365559822073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +230,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 315
+--- !u!114 &-2550506355408143081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Tape_Recorder/Tape_Recorder_On
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Tape_Recorder/Tape_Recorder_On
+  guid: e922c6b463382e4a845a06897dc8fdcf
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1045
 --- !u!114 &-638675344899549611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,12 +309,19 @@ MonoBehaviour:
   - {fileID: -8099663318791477464}
   - {fileID: -5671301974864487793}
   - {fileID: -5383190111388925020}
+  - {fileID: -8107855471433861111}
+  - {fileID: 3292928825856335750}
+  - {fileID: -5058336353548109190}
+  - {fileID: -4975882453966044440}
+  - {fileID: 6371542962273765968}
+  - {fileID: -2550506355408143081}
+  - {fileID: 2539188487745970673}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1339391324832955277}
   StringsBanks:
   - {fileID: 8912408686893941275}
-  stringsBankWriteTime: 637740376900000000
+  stringsBankWriteTime: 637751060510000000
   cacheVersion: 8
 --- !u!114 &672755653736762158
 MonoBehaviour:
@@ -285,7 +384,7 @@ MonoBehaviour:
   Path: Assets/Resources/Audio/FMOD_ASSETS/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637746708570000000
+  lastModified: 637751060510000000
   FileSizes: []
   Exists: 1
 --- !u!114 &1779089346114983162
@@ -334,6 +433,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 238471
+--- !u!114 &2539188487745970673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Ammo_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Weapons/Tranq_Gun/Tranq_Gun_Ammo_Pickup
+  guid: f441e147b023ef4382223b6cb40e085b
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 642
 --- !u!114 &3140528074284457902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +479,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 545
+--- !u!114 &3292928825856335750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/Alarm
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Alarm
+  guid: 2cba2fe7f9692a47adbe3a3013380748
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1946
 --- !u!114 &4610370439757440441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +571,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1760
+--- !u!114 &6371542962273765968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Characters/Items/Tape_Recorder/Tape_Recorder_Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/Characters/Items/Tape_Recorder/Tape_Recorder_Pickup
+  guid: cb4910e0c69030469350d01636cdb6d6
+  Banks:
+  - {fileID: 1339391324832955277}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 637
 --- !u!114 &7613828428949020683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,8 +632,8 @@ MonoBehaviour:
   Path: Assets/Resources/Audio/FMOD_ASSETS/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637740376900000000
+  lastModified: 637751060510000000
   FileSizes:
   - Name: 
-    Value: 1540
+    Value: 1878
   Exists: 1

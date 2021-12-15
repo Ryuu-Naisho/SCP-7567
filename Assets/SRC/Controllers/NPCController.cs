@@ -7,11 +7,11 @@ using UnityEngine;
 public class NPCController : MonoBehaviour
 {
     [SerializeField] private int ChaseRange;
-    [SerializeField] private int AttackRange;
     [SerializeField] private int FOV;
     [SerializeField] private int health;
     [SerializeField] private float stunnedTime;
     [SerializeField] private bool ignorePlayer;
+    private float AttackRange;
     private AnimatorUtil animator;
     private Transform playerTransform;
     private UnityEngine.AI.NavMeshAgent agent;
@@ -41,6 +41,7 @@ public class NPCController : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator = GetComponent<AnimatorUtil>();
         h = GetComponent<BoxCollider>().size.y;
+        AttackRange = (agent.stoppingDistance * agent.stoppingDistance)+2;
     }
 
     // Update is called once per frame
@@ -48,18 +49,22 @@ public class NPCController : MonoBehaviour
     {
         if (canMove)
         {
-            if(agent.velocity.magnitude > 0.15f)
+            if (!attack)
             {
-                idle = false;
-            }
-            else
-            {
-                idle = true;
+                if(agent.velocity.magnitude > 0.15f)
+                {
+                    idle = false;
+                }
+                else
+                {
+                    idle = true;
+                }
             }
 
 
 
             PlayerFinder();
+            nrTar();
             Sentry();
             if (chase)
             {
@@ -83,20 +88,24 @@ public class NPCController : MonoBehaviour
 
     private void Animate()
     {
-        if (chase)
+        if (chase && !attack)
         {
             animator.Run();
         }
         else if (!chase && !idle)
         {
-            animator.Walk();
+            //TODO need walk animation for infected animator.Walk();
+            animator.Run();
         }
         else if (idle)
         {
             animator.Idle();
         }
+        else if (attack)
+        {
+            animator.Attack();
+        }
     }
-
 
     private void Idle()
     {
@@ -116,6 +125,7 @@ public class NPCController : MonoBehaviour
         {
              chase = true;
              TargetTransform = tInView;
+             Debug.Log("chase plaeyre");
         }
         else if (tInView.tag == tags.NPCNonInfected)
         {
@@ -127,12 +137,20 @@ public class NPCController : MonoBehaviour
     }
 
 
+    public void SwitchIdle()
+    {
+        chase = false;
+        attack = false;
+        idle = true;
+    }
+
+
     private void PlayerFinder()
     {
         if (ignorePlayer)
             return;
         float distance = (playerTransform.position-this.transform.position).sqrMagnitude;
-        if (distance<ChaseRange*ChaseRange && distance > AttackRange*AttackRange) {
+        if (distance<ChaseRange*ChaseRange && distance > AttackRange) {
             if (!chase)
             {
                 idle = false;
@@ -140,16 +158,25 @@ public class NPCController : MonoBehaviour
                 TargetTransform = playerTransform;
             }
         }
-        else if (distance<= (agent.stoppingDistance * agent.stoppingDistance)+1) {
+    }
+
+
+    private void nrTar()
+    {
+        if (TargetTransform == null)
+            return;
+        float distance = (TargetTransform.position-this.transform.position).sqrMagnitude;
+        if (distance<= AttackRange) {
+            chase = false;
             if (!attack)
             {
                 idle = false;
                 attack = true;
             }
-            if (chase)
-            {
-                chase = false;
-            }
+        }
+        else
+        {
+            attack = false;
         }
     }
 

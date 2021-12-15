@@ -335,6 +335,7 @@ MonoBehaviour:
   health: 10
   stunnedTime: 1
   endurance: 2
+  infectedPRF: {fileID: 5768580755439259034, guid: 2ff2a2e422a28892c9e03b047bda75d5, type: 3}
 --- !u!195 &5549215711185245736
 NavMeshAgent:
   m_ObjectHideFlags: 0
