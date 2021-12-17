@@ -53,6 +53,7 @@ public class FlameThrowerController : MonoBehaviour
         {
             if (soundPlaying)
                 StopSound();
+            ceaseFire();
             firing = false;
         }
         else if (Input.GetKeyDown("r"))

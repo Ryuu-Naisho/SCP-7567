@@ -17,6 +17,7 @@ public class NPCController : MonoBehaviour
     private UnityEngine.AI.NavMeshAgent agent;
     private bool chase = false;
     private bool canMove = true;
+    private bool dead = false;
     private bool attack = false;
     private float h;
     private bool idle = true;
@@ -93,6 +94,10 @@ public class NPCController : MonoBehaviour
         {
             animator.Sleep();
         }
+        else if (dead)
+        {
+            animator.Dead();
+        }
         else
             {
             if (chase && !attack)
@@ -113,6 +118,25 @@ public class NPCController : MonoBehaviour
                 animator.Attack();
             }
         }
+    }
+
+
+    public void Burn()
+    {
+        Die();
+    }
+
+
+    public void Die()
+    {
+        agent.isStopped = true;
+        agent.enabled = false;
+        chase = false;
+        attack = false;
+        idle = false;
+        sleep = false;
+        canMove = false;
+        dead = true;
     }
 
     private void Idle()

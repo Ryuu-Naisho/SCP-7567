@@ -13,7 +13,7 @@
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
-[LOG] AsyncManager::init                       : manager 0x55eb657af958 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x556a3702dd68 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -31,14 +31,14 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fa034404b2c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7ff6bcc66b2c
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fa0b8783d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fa0b8783c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fa0b8783cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fa0b8783c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f9fe0003cf8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7ff761322d60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7ff761322c90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7ff761322cc0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7ff761322c60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff66c00f658
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Flamethrower_Pick_Up', format=5, channels=2, frequency=48000, lengthbytes=17280, lengthpcm=85032, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.895874.
@@ -47,61 +47,105 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fa034404b2c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7ff6bcc66b2c
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fa0b8783d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fa0b8783c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fa0b8783cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fa0b8783c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f9fe0003cf8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Tranq_Gun_Pick_Up', format=5, channels=2, frequency=48000, lengthbytes=15136, lengthpcm=53700, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.754456.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fa034404b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fa0b8783d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fa0b8783c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fa0b8783cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fa0b8783c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f9fe0003cf8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7ff761322d60
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7ff761322c90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7ff761322cc0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7ff761322c60
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff66c00f658
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Tranq_Gun_Reload', format=5, channels=2, frequency=48000, lengthbytes=18752, lengthpcm=69457, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.899353.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7fa034404b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7fa0b8783d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7fa0b8783c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7fa0b8783cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7fa0b8783c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f9fe0003cf8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Tranq_Gun_Shoot', format=5, channels=2, frequency=48000, lengthbytes=18720, lengthpcm=84512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.896484.
-[LOG] SoundI::release                          :  (0x7f9fe0005438)
-[LOG] SoundI::release                          :     Tranq_Gun_Pick_Up (0x7f9fe0023d78)
-[LOG] SoundI::release                          :  (0x7f9fe0013448)
-[LOG] SoundI::release                          :     Flamethrower_Pick_Up (0x7f9fe00050d8)
-[LOG] SoundI::release                          :  (0x7f9fe00240d8)
-[LOG] SoundI::release                          :     Tranq_Gun_Reload (0x7f9fe0024248)
-[LOG] SoundI::release                          :  (0x7f9fe00245c8)
-[LOG] SoundI::release                          :     Tranq_Gun_Shoot (0x7f9fe0024738)
-[LOG] SoundI::release                          :  (0x7f9fe0005738)
-[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 6 (0x7f9fe0012f78)
-[LOG] SoundI::release                          :  (0x7f9fe00132d8)
-[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 7 (0x7f9fe0014348)
+[LOG] SystemI::createSound                     : filename = Assets/Resources/Audio/FMOD_ASSETS/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
+[LOG] SystemI::createSound                     : setdata soundi = 0x7ff64000e5c8 : node = 0x7ff640012800
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff64000d138.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff64000e5c8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Resources/Audio/FMOD_ASSETS/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21035232
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 33056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff640012910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Flamethrower_Shoot', format=5, channels=2, frequency=48000, lengthbytes=141216, lengthpcm=556686, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.901184.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[WRN] FMOD_OS_Thread_Callback                  :     Cannot set real-time thread priorities due to insufficient privileges
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff64000e5c8
+[LOG] SoundI::release                          : Flamethrower_Shoot (0x7ff64000e5c8)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630030fb8)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630029e68)
+[LOG] SystemI::createSound                     : filename = Assets/Resources/Audio/FMOD_ASSETS/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7ff640027108 : node = 0x7ff640012800
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff64000d138.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff640027108
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Resources/Audio/FMOD_ASSETS/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21035232
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 33056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff640012910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Flamethrower_Shoot', format=5, channels=2, frequency=48000, lengthbytes=141216, lengthpcm=556686, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.901184.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff640027108
+[LOG] SoundI::release                          : Flamethrower_Shoot (0x7ff640027108)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630023fe8)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630000d78)
+[LOG] SystemI::createSound                     : filename = Assets/Resources/Audio/FMOD_ASSETS/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7ff640026648 : node = 0x7ff640012800
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff64000d138.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff640026648
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Resources/Audio/FMOD_ASSETS/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21035232
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 33056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff640012910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Flamethrower_Shoot', format=5, channels=2, frequency=48000, lengthbytes=141216, lengthpcm=556686, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.901184.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff640026648
+[LOG] SoundI::release                          : Flamethrower_Shoot (0x7ff640026648)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630026578)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630024d88)
+[LOG] SystemI::createSound                     : filename = Assets/Resources/Audio/FMOD_ASSETS/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7ff630024d88 : node = 0x7ff640012800
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff64000d138.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff630024d88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Resources/Audio/FMOD_ASSETS/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21035232
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 33056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff640012910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Flamethrower_Shoot', format=5, channels=2, frequency=48000, lengthbytes=141216, lengthpcm=556686, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.901184.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff630024d88
+[LOG] SoundI::release                          : Flamethrower_Shoot (0x7ff630024d88)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630031618)
+[LOG] SoundI::release                          :     Flamethrower_Shoot (0x7ff630031808)
+[LOG] SoundI::release                          :  (0x7ff66c00ee08)
+[LOG] SoundI::release                          :     Flamethrower_Pick_Up (0x7ff66c00ef78)
+[LOG] SoundI::release                          :  (0x7ff66c00f318)
+[LOG] SoundI::release                          :     Tranq_Gun_Reload (0x7ff66c00f488)
+[LOG] SoundI::release                          :  (0x7ff66c00fc78)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 6 (0x7ff66c00b668)
+[LOG] SoundI::release                          :  (0x7ff66c00b9c8)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 7 (0x7ff66c00bb38)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
