@@ -25,6 +25,7 @@ public class NPCController : MonoBehaviour
     private NINPCController NINPCC;
     private PathUtil pathUtil;
     private Transform POV;
+    private bool sleep = false;
     private Transform TargetTransform;
     private TagModel tags;
 
@@ -88,22 +89,29 @@ public class NPCController : MonoBehaviour
 
     private void Animate()
     {
-        if (chase && !attack)
+        if (sleep)
         {
-            animator.Run();
+            animator.Sleep();
         }
-        else if (!chase && !idle)
-        {
-            //TODO need walk animation for infected animator.Walk();
-            animator.Run();
-        }
-        else if (idle)
-        {
-            animator.Idle();
-        }
-        else if (attack)
-        {
-            animator.Attack();
+        else
+            {
+            if (chase && !attack)
+            {
+                animator.Run();
+            }
+            else if (!chase && !idle)
+            {
+                //TODO need walk animation for infected animator.Walk();
+                animator.Run();
+            }
+            else if (idle)
+            {
+                animator.Idle();
+            }
+            else if (attack)
+            {
+                animator.Attack();
+            }
         }
     }
 
@@ -134,6 +142,17 @@ public class NPCController : MonoBehaviour
             NINPCC = TargetTransform.GetComponent<NINPCController>();
             NINPCC.Chase();
         }
+    }
+
+
+
+    public void Sleep()
+    {
+        canMove = false;
+        chase = false;
+        attack = false;
+        idle = false;
+        sleep = true;
     }
 
 

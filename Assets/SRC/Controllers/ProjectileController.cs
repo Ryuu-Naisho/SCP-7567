@@ -34,12 +34,14 @@ public class ProjectileController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         string wtag = collision.gameObject.tag;
-        if (wtag == tags.Enemy)
+        if (wtag == tags.NpcInfected)
         {
             //EnemyController enemyController = collision.gameObject.GetComponent<EnemyController>();
             //enemyController.Hit();
             m_Rigidbody.isKinematic = true;
-            Destroy(gameObject, 1f);
+            //Destroy(gameObject, 1f);
+            NPCController n11r = collision.gameObject.GetComponent<NPCController>();
+            n11r.Sleep();
         }
     }
 }

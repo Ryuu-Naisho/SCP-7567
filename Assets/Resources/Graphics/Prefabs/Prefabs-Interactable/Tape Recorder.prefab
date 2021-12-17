@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a08f8cdb49e2c3ab74e16cd49a0e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enumItemType: 0
+  enumItemType: 6
 --- !u!65 &8271144506127528339
 BoxCollider:
   m_ObjectHideFlags: 0
