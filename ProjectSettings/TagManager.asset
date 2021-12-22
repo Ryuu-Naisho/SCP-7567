@@ -8,6 +8,7 @@ TagManager:
   - NpcInfected
   - Env
   - Floor
+  - SCP
   layers:
   - Default
   - TransparentFX

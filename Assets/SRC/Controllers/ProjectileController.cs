@@ -34,7 +34,7 @@ public class ProjectileController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         string wtag = collision.gameObject.tag;
-        if (wtag == tags.NpcInfected)
+        if (wtag == tags.NpcInfected || wtag == tags.SCP)
         {
             //EnemyController enemyController = collision.gameObject.GetComponent<EnemyController>();
             //enemyController.Hit();

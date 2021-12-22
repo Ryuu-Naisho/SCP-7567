@@ -70,7 +70,14 @@ public class NPCController : MonoBehaviour
             Sentry();
             if (chase)
             {
-                goToPoint(TargetTransform.position);
+                if (TargetTransform != null)
+                {
+                    goToPoint(TargetTransform.position);
+                }
+                else
+                {
+                    chase = false;
+                }
             }
             if (attack)
             {

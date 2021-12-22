@@ -112,15 +112,19 @@ public class PickUpUtil : MonoBehaviour
                 break;
             case EnumItemType.FlamethrowerCanister:
                 itemType = pickUpModel.FlamethrowerCanister;
+                soundEvent = eventModel.Flamethrower_Canister_Pickup;
                 break;
             case EnumItemType.Note:
                 itemType = pickUpModel.Note;
+                soundEvent = eventModel.Note_Pickup;
                 break;
             case EnumItemType.TapeRecorder:
                 itemType = pickUpModel.TapeRecorder;
+                soundEvent = eventModel.Tape_Recorder_Pickup;
                 break;
             case EnumItemType.TranqDart:
                 itemType = pickUpModel.TranqDart;
+                soundEvent = eventModel.Tranq_Dart_Pickup;
                 break;
             case EnumItemType.TranquilizerGun:
                 isWeapon = true;
