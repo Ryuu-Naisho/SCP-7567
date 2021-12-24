@@ -42,6 +42,8 @@ public class AnimatorUtil : MonoBehaviour
             animation = "dead";
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("sleep"))
             animation = "sleep";
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("burn"))
+            animation = "burn";
 
 
 
@@ -54,6 +56,12 @@ public class AnimatorUtil : MonoBehaviour
         int index = Random.Range(0, AttArr.Length);
         string AttackAnimation = AttArr[index];
         animator.SetTrigger(AttackAnimation);
+    }
+
+
+    public void Burn()
+    {
+        animator.SetTrigger("burn");
     }
 
 

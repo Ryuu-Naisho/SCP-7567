@@ -64,10 +64,12 @@ public class NPCController : MonoBehaviour
             }
 
 
-
-            PlayerFinder();
-            nrTar();
-            Sentry();
+            if (!dead)
+            {
+                PlayerFinder();
+                nrTar();
+                Sentry();
+            }
             if (chase)
             {
                 if (TargetTransform != null)
@@ -103,7 +105,7 @@ public class NPCController : MonoBehaviour
         }
         else if (dead)
         {
-            animator.Dead();
+            animator.Burn();
         }
         else
             {
@@ -136,14 +138,14 @@ public class NPCController : MonoBehaviour
 
     public void Die()
     {
+        dead = true;
+        canMove = false;
         agent.isStopped = true;
         agent.enabled = false;
         chase = false;
         attack = false;
         idle = false;
         sleep = false;
-        canMove = false;
-        dead = true;
     }
 
     private void Idle()
