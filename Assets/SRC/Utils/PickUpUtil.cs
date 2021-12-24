@@ -10,6 +10,7 @@ internal enum EnumItemType
     TranqDart,
     TranquilizerGun,
     Note,
+    SCP,
     TapeRecorder
 }
 
@@ -23,6 +24,7 @@ public class PickUpUtil : MonoBehaviour
     private EventModel eventModel;
     private GUIController _Gui;
     private HintModel hintModel;
+    private bool isSCP = false;
     private bool isWeapon = false;
     private ItemStruct itemStruct;
     private string itemType;
@@ -51,7 +53,7 @@ public class PickUpUtil : MonoBehaviour
         _Gui = GUIObject.GetComponent<GUIController>();
 
 
-        itemStruct = new ItemStruct(itemType, isWeapon);
+        itemStruct = new ItemStruct(itemType, isWeapon, isSCP);
         itemStruct.GetTransform = transform;
     }
 
@@ -90,10 +92,11 @@ public class PickUpUtil : MonoBehaviour
         playerController.PickUpItem(itemStruct);
         DoSound();
         _Gui.clearHint();
-        if (!isWeapon)
-            Destroy(gameObject);
         collected = true;
         canPickUp = false;
+        if (isWeapon || isSCP )
+            return;
+        Destroy(gameObject);
     }
 
 
@@ -131,7 +134,10 @@ public class PickUpUtil : MonoBehaviour
                 itemType = pickUpModel.TranquilizerGun;
                 soundEvent = eventModel.Tranq_Gun_Pickup;
                 break;
-                
+            case EnumItemType.SCP:
+                itemType = pickUpModel.SCP;
+                isSCP = true;
+                break;
             }
         }
 

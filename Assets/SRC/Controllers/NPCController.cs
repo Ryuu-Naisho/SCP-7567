@@ -179,11 +179,19 @@ public class NPCController : MonoBehaviour
 
     public void Sleep()
     {
+        if(!agent.isStopped)
+            agent.isStopped = true;
+        agent.enabled = false;
         canMove = false;
         chase = false;
         attack = false;
         idle = false;
         sleep = true;
+        if (tag == tags.SCP)
+        {
+            PickUpUtil PU = GetComponent<PickUpUtil>();
+            PU.enabled = true;
+        }
     }
 
 

@@ -2157,6 +2157,8 @@ GameObject:
   - component: {fileID: 6752814650519991717}
   - component: {fileID: 8737477640429338259}
   - component: {fileID: 3296994187626746617}
+  - component: {fileID: -8130663777990393615}
+  - component: {fileID: 4017654598907255993}
   m_Layer: 0
   m_Name: SCPMob_
   m_TagString: SCP
@@ -2279,6 +2281,32 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-8130663777990393615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988937226667802096}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a08f8cdb49e2c3ab74e16cd49a0e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enumItemType: 6
+--- !u!65 &4017654598907255993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988937226667802096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &9083788900176275924
 GameObject:

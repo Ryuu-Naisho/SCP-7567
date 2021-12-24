@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Camera firstPersonCamera;
     [SerializeField] private Camera overheadCamera;
     [SerializeField] private int MaxFlamethrowerCanisterCapacity;
+    [SerializeField] private Transform Shoulder;
     private GUIController _Gui;
     private InventoryUtil inventory;
     private NameModel names;
@@ -63,6 +64,18 @@ public class PlayerController : MonoBehaviour
         inventory.Add(item);
         string msg = item.ToString() + " has been collected.";
         _Gui.writeDebug(msg);
+        if (item.IsSCP)
+        {
+            GameObject scp = item.GetTransform.gameObject;
+            scp.transform.parent = Shoulder;
+            scp.transform.position = Shoulder.position;
+            scp.transform.rotation = Shoulder.rotation;
+            //scp.transform.RotateAround (scp.transform.position, transform.up, 180f);
+            Rigidbody rigidbody = scp.GetComponent<Rigidbody>();
+            Destroy (rigidbody);
+            Collider cldr = scp.GetComponent<Collider>();
+            cldr.enabled = false;
+        }
     }
 
 
