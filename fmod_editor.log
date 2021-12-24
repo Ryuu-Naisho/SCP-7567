@@ -13,7 +13,7 @@
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
 [WRN] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
-[LOG] AsyncManager::init                       : manager 0x55d213346cd8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x55c0fd50d748 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -26,82 +26,10 @@
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7f75d4291b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7f7636906d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7f7636906c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7f7636906cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7f7636906c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f754001a268
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Flamethrower_Pick_Up', format=5, channels=2, frequency=48000, lengthbytes=17280, lengthpcm=85032, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.895874.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7f75d4291b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7f7636906d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7f7636906c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7f7636906cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7f7636906c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f754001a268
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Tranq_Gun_Pick_Up', format=5, channels=2, frequency=48000, lengthbytes=15136, lengthpcm=53700, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.754456.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7f75d4291b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7f7636906d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7f7636906c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7f7636906cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7f7636906c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f754001a268
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Flamethrower_Fuel_Pick_Up', format=5, channels=2, frequency=48000, lengthbytes=17056, lengthpcm=71750, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.896057.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 21035232
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 33056
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7f75d4291b2c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x7f7636906d60
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x7f7636906c90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x7f7636906cc0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x7f7636906c60
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f754001a268
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Tranq_Gun_Reload', format=5, channels=2, frequency=48000, lengthbytes=18752, lengthpcm=69457, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.899353.
-[LOG] SoundI::release                          :  (0x7f754000ede8)
-[LOG] SoundI::release                          :     Tranq_Gun_Pick_Up (0x7f754000ef58)
-[LOG] SoundI::release                          :  (0x7f754000d378)
-[LOG] SoundI::release                          :     Flamethrower_Pick_Up (0x7f754001bd48)
-[LOG] SoundI::release                          :  (0x7f7540017f88)
-[LOG] SoundI::release                          :     Flamethrower_Fuel_Pick_Up (0x7f754000f0f8)
-[LOG] SoundI::release                          :  (0x7f75400299a8)
-[LOG] SoundI::release                          :     Tranq_Gun_Reload (0x7f7540029b18)
-[LOG] SoundI::release                          :  (0x7f7540002338)
-[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 6 (0x7f7540025958)
-[LOG] SoundI::release                          :  (0x7f754000d208)
-[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 7 (0x7f7540019df8)
+[LOG] SoundI::release                          :  (0x7f833c01f758)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 6 (0x7f833c01f8c8)
+[LOG] SoundI::release                          :  (0x7f833c0204c8)
+[LOG] SoundI::release                          :     Footsteps, Human, Asphalt, Male, Walk SND11513 7 (0x7f833c020638)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -112,11 +40,3 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[WRN] OutputPulseAudio::streamUnderflowCallback : Buffer underrun detected in PulseAudio.
-[LOG] OutputPulseAudio::streamUnderflowCallback : Increasing buffer size - new block count = 5.
-[WRN] OutputPulseAudio::streamUnderflowCallback : Buffer underrun detected in PulseAudio.
-[LOG] OutputPulseAudio::streamUnderflowCallback : Increasing buffer size - new block count = 6.

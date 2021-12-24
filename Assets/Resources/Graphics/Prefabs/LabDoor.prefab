@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4821048289291102903}
-  - component: {fileID: 8451029392766559506}
-  - component: {fileID: 5957384058746737112}
-  - component: {fileID: 4926109502841900144}
+  - component: {fileID: -4590968744217256222}
+  - component: {fileID: -1282176606246262445}
   m_Layer: 0
   m_Name: LabDoor
   m_TagString: Untagged
@@ -29,25 +28,84 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.2063494, y: -0.00000011920929, z: -8.650082}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7845719740416060153}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8451029392766559506
+--- !u!114 &-4590968744217256222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308650276549505037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96956059bdcd34a985ec079b172fb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &-1282176606246262445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308650276549505037}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.506626, y: 2.878312, z: 3}
+  m_Center: {x: 0.7533154, y: 1.439156, z: -0.078027345}
+--- !u!1 &9182788550636638863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7845719740416060153}
+  - component: {fileID: 4075777294796106631}
+  - component: {fileID: 3321277873210879346}
+  - component: {fileID: 1430245862552673859}
+  m_Layer: 0
+  m_Name: LabDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7845719740416060153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182788550636638863}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4821048289291102903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4075777294796106631
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5308650276549505037}
+  m_GameObject: {fileID: 9182788550636638863}
   m_Mesh: {fileID: 2973332850224116603, guid: 66ed1b9e103652341a0aae8b35b89bae, type: 3}
---- !u!23 &5957384058746737112
+--- !u!23 &3321277873210879346
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5308650276549505037}
+  m_GameObject: {fileID: 9182788550636638863}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,16 +141,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4926109502841900144
-BoxCollider:
+--- !u!64 &1430245862552673859
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5308650276549505037}
+  m_GameObject: {fileID: 9182788550636638863}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.506626, y: 2.878312, z: 0.15605469}
-  m_Center: {x: 0.7533154, y: 1.439156, z: -0.078027345}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2973332850224116603, guid: 66ed1b9e103652341a0aae8b35b89bae, type: 3}
