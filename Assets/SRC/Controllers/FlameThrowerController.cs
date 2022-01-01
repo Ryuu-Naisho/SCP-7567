@@ -156,6 +156,14 @@ public class FlameThrowerController : MonoBehaviour
     }
 
 
+
+
+    public bool isReloading()
+    {
+        return reloading;
+    }
+
+
     private void StartSound()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(eventModel.Flamethrower_Shoot);

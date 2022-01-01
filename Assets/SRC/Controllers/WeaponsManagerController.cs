@@ -80,8 +80,28 @@ public class WeaponsManagerController : MonoBehaviour
     }
 
 
+    private bool isReloading()
+    {
+        bool reloading = false;
+        if(primary.GetComponent<GunController>() != null)
+        {
+            GunController gunController = primary.GetComponent<GunController>();
+            reloading =  gunController.isReloading();
+        }
+        else
+        {
+            FlameThrowerController flameThrowerController = primary.GetComponent<FlameThrowerController>();
+            reloading =  flameThrowerController.isReloading();
+        }
+
+        return reloading;
+    }
+
+
     public void SwitchWeapon()
     {
+        if (isReloading())
+            return;
         if (secondary == null && primary == null)
             return;
         if (secondary == null)

@@ -102,6 +102,12 @@ public class GunController : MonoBehaviour
     }
 
 
+    public bool isReloading()
+    {
+        return reloading;
+    }
+
+
     private void SetItemType()
     {
         switch(this.ammoType)
