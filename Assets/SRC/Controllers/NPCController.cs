@@ -166,7 +166,6 @@ public class NPCController : MonoBehaviour
         {
              chase = true;
              TargetTransform = tInView;
-             Debug.Log("chase plaeyre");
         }
         else if (tInView.tag == tags.NPCNonInfected)
         {
