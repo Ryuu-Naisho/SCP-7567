@@ -79,8 +79,10 @@
     <Compile Include="Assets\SRC\Utils\ItemStruct.cs" />
     <Compile Include="Assets\SRC\Controllers\FootController.cs" />
     <Compile Include="Assets\SRC\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\SRC\Controllers\CellController.cs" />
     <Compile Include="Assets\SRC\Models\EventModel.cs" />
     <Compile Include="Assets\SRC\Controllers\FlameThrowerController.cs" />
+    <Compile Include="Assets\SRC\AnimOnStartSwapObjs.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
